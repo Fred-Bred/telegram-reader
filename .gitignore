@@ -1,0 +1,38 @@
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Runtime data (user uploads, transcripts, audio) ---
+data/
+out/
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+
+# --- Tooling caches ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+uv.lock.bak
+
+# --- Telegram client sessions (never commit credentials) ---
+*.session
+*.session-journal
+
+# --- Editors / OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
