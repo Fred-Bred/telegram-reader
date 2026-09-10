@@ -5,6 +5,9 @@ printed article, send them to the bot, tap **Read aloud** — and get an MP3 plu
 transcribed text. Built so someone recovering from a concussion can keep up with
 thesis reading while resting from screens.
 
+> **Note:** this project was mostly built by AI, with a human steering the requirements
+> and reviewing the results.
+
 ```
 You (phone)                Home server                     OpenAI
   📷 page photo ──────────▶ OCR (gpt-4.1-mini vision)  ───▶ clean text
@@ -12,7 +15,7 @@ You (phone)                Home server                     OpenAI
   🔊 Read aloud ──────────▶ TTS (gpt-4o-mini-tts)     ───▶ MP3 + transcript
 ```
 
-## How she uses it
+## Usage
 
 1. Send one or more photos of pages to the bot (an album works in one go). The bot reacts
    with 👀 and quietly OCRs each page in the background — nothing to read.
@@ -37,8 +40,8 @@ machine that is always on (home server).
 
 1. **Create the bot**: in Telegram, talk to [@BotFather](https://t.me/BotFather) →
    `/newbot` → copy the token.
-2. **Find her user ID**: she messages [@userinfobot](https://t.me/userinfobot) and copies
-   the numeric id.
+2. **Find your user ID**: message [@userinfobot](https://t.me/userinfobot) and copy the
+   numeric id.
 3. **Configure**:
    ```bash
    cp .env.example .env
@@ -96,7 +99,7 @@ service.
 
 ### Local testing without Telegram
 
-Useful for checking OCR quality and how the Danish voice sounds before she relies on it:
+Useful for checking OCR quality and how the Danish voice sounds before relying on it:
 
 ```bash
 export OPENAI_API_KEY=sk-...
